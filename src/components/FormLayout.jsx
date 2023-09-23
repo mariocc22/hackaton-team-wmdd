@@ -74,8 +74,8 @@ const FormLayout = ({ cordinate }) => {
           {/* input the name */}
           <TextField
             id="outlined-basic"
-            label="Place name"
             variant="outlined"
+            value="Science World"
           />
           <Divider variant="middle" />
           <TextField

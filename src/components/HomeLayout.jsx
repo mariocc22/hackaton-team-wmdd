@@ -75,6 +75,7 @@ function HomeLayout({ data, openFormLayout }) {
                 <Marker
                   key={item.id}
                   position={{ lat: item.lat, lng: item.lng }}
+                  icon="../src/assets/chair.png"
                   onClick={() => {
                     handleActiveMarker(item.id);
                   }}
