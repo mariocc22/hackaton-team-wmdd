@@ -39,24 +39,28 @@ function HomeLayout({ data }) {
               center={center}
               zoom={13}
             >
-              {data.map((item) => (
-                <Marker
-                  key={item.id}
-                  position={{ lat: item.lat, lng: item.lng }}
-                  onClick={() => {
-                    handleActiveMarker(item.id);
-                  }}
-                >
-                  {activeMarker === item.id ? (
-                    <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                      <div>
-                        <h3>Test</h3>
-                        <Link>Report issue</Link>
-                      </div>
-                    </InfoWindow>
-                  ) : null}
-                </Marker>
-              ))}
+
+              {data.map(
+                (item) => (
+                  
+                  (
+                    <Marker
+                      key={item.id}
+                      position={{ lat: item.lat, lng: item.lng }}
+                      onClick={() => {
+                        handleActiveMarker(item.id);
+                      }}
+                    >
+                      {activeMarker === item.id ? (
+                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                         <DetailModal details={{item}} />   
+                        </InfoWindow>
+                      ) : null}
+                    </Marker>
+                  )
+                )
+              )}
+
               {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
