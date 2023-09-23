@@ -16,7 +16,7 @@
       "reporterName": "Jane Smith"
     },
     {
-      "type": "construction",
+      "type": "temporaryClose",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
       "image": "../src/assets/img_3.jpg",
@@ -30,7 +30,7 @@
       "reporterName": "Emily Brown"
     },
     {
-      "type": "construction",
+      "type": "temporaryClose",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
       "image": "../src/assets/img_5.jpg",
@@ -65,7 +65,7 @@
       "reporterName": "William Anderson"
     },
     {
-      "type": "outOfOrder",
+      "type": "temporaryClose",
       "address": "789 Cedar Road",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 
 import "./App.css";
@@ -9,7 +8,6 @@ import ListLayout from "./components/ListLayout";
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
-
 
 function App() {
   const [selectView, setSelectView] = useState("mapView");
@@ -37,7 +35,6 @@ function App() {
 
       {selectView == "mapView" && <HomeLayout />}
       {selectView == "listView" &&  <ListLayout data={data.reports} />}
-
     </>
   );
 }

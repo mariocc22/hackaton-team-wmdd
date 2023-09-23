@@ -1,9 +1,11 @@
+
 import React from "react";
 import { Wrapper } from "@googlemaps/react-wrapper";
 
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { useMemo } from "react";
 import "../../src/App.css";
+import OpenReportModal from "./OpenReportModal";
 
 function HomeLayout() {
   const { isLoaded } = useLoadScript({
