@@ -11,12 +11,13 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 import { Divider, InputLabel, TextField } from "@mui/material";
 
-import { addReport, randomAddress } from "../../utils/helpers";
+import { addReport } from "../../utils/helpers";
 
-const FormLayout = () => {
+const FormLayout = ({ cordinate }) => {
   const [popup, setPopup] = useState("");
   const [selected, setSelected] = useState(new Date());
 
+  console.log("cordinate", cordinate);
   let footer = <p>Please pick a day.</p>;
   if (selected) {
     footer = <p>You picked {format(selected, "PP")}.</p>;
@@ -37,8 +38,7 @@ const FormLayout = () => {
       // do stuff with the form
       setPopup(!popup);
     }
-
-    const coordinates = randomAddress();
+    const coordinates = cordinate;
 
     // add it to the server
     const report = {
@@ -49,7 +49,7 @@ const FormLayout = () => {
       endDate: "10/30/2023",
       reporterName: "Anonymous",
       lat: +coordinates.lat,
-      lng: +coordinates.lng,
+      lng: +coordinates.lon,
       name: placeName,
       image: "../src/assets/img_1.jpg",
     };

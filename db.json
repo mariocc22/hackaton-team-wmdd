@@ -1,39 +1,25 @@
 {
   "reports": [
     {
-      "id": "dsdfds_id",
-      "type": "Temporarily Closed",
-      "postedDate": "09/23/2023",
-      "address": "sdfsdf",
-      "endDate": "10/30/2023",
-      "reporterName": "Anonymous",
-      "lat": 49.2774,
-      "lng": -123.1466,
-      "name": "dsdfds",
-      "image": "../src/assets/img_1.jpg"
-    }
-  ]
-}
-{
-  "reports": [
-    {
-      "id":"1",
+      "id": "1",
       "type": "construction",
       "postedDate": "09/23/2023",
       "address": "5678 Elm St",
+      "postedDate": "09/25/2023",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "John Doe",
       "lat": 40.7128,
       "lng": -74.006,
-      "name": "Vancouver"
+      "name": "Metrotown"
     },
     {
-      "id":"2",
+      "id": "2",
       "type": "outOfOrder",
       "postedDate": "09/23/2023",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Jane Smith",
       "lat": 49.2818,
@@ -41,11 +27,12 @@
       "name": "Coffee Americana"
     },
     {
-      "id":"3",
+      "id": "3",
       "type": "temporaryClose",
       "postedDate": "09/23/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_3.jpg",
       "reporterName": "David Johnson",
       "lat": 49.2831,
@@ -53,11 +40,12 @@
       "name": "Gas station"
     },
     {
-      "id":"4",
+      "id": "4",
       "type": "outOfOrder",
       "postedDate": "09/23/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-09-05",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "Emily Brown",
       "lat": 49.2823,
@@ -65,11 +53,12 @@
       "name": "College of Vancouver"
     },
     {
-      "id":"5",
+      "id": "5",
       "type": "temporaryClose",
       "postedDate": "09/23/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Michael Lee",
       "lat": 49.2813,
@@ -77,11 +66,12 @@
       "name": "Amigo cafe"
     },
     {
-      "id":"6",
+      "id": "6",
       "type": "outOfOrder",
       "postedDate": "09/23/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-07-23",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "Sophia Wilson",
       "lat": 49.2816,
@@ -89,11 +79,12 @@
       "name": "Safeway"
     },
     {
-      "id":"7",
+      "id": "7",
       "type": "construction",
       "postedDate": "09/23/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-06-10",
+      "postedDate": "09/25/2023",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Daniel Garcia",
       "lat": 49.2718,
@@ -101,7 +92,7 @@
       "name": "I love Vancouver"
     },
     {
-      "id":"8",
+      "id": "8",
       "type": "outOfOrder",
       "postedDate": "09/23/2023",
       "address": "654 Pine Lane",
@@ -113,10 +104,11 @@
       "name": "Lovely restaurant"
     },
     {
-      "id":"9",
+      "id": "9",
       "type": "construction",
       "postedDate": "09/23/2023",
       "address": "789 Cedar Road",
+      "postedDate": "09/25/2023",
       "endDate": "2022-04-22",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "William Anderson",
@@ -125,16 +117,29 @@
       "name": "Cafe hola"
     },
     {
-      "id":"10",
+      "id": "10",
       "type": "temporaryClose",
       "postedDate": "09/23/2023",
       "address": "789 Cedar Road",
+      "postedDate": "09/25/2023",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Sophie Thomas",
       "lat": 49.2901,
       "lng": -123.1232,
       "name": "Science world"
+    },
+    {
+      "id": "Last test_id",
+      "type": "Out of Order",
+      "address": "kjerf,erer",
+      "postedDate": "09/25/2023",
+      "endDate": "10/30/2023",
+      "reporterName": "Anonymous",
+      "lat": 49.28885854234304,
+      "lng": -123.11124801635742,
+      "name": "Last test",
+      "image": "../src/assets/img_1.jpg"
     }
   ]
 }

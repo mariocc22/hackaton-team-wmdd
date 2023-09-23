@@ -8,10 +8,10 @@ import { useState } from "react";
 export default function DetailModal({ details }) {
   console.log("details", details);
   const [activeModal, setActiveModal] = useState({
-    name: details.item.name ,
-    type: details.item.type ,
-    image: details.item.image ,
-    datePosted: details.item.datePosted ,
+    name: details.item.name,
+    type: details.item.type,
+    image: details.item.image,
+    postedDate: details.item.postedDate,
     dateResolved: details.item.endDate,
     reportBy: details.item.reporterName,
   });
@@ -67,7 +67,7 @@ export default function DetailModal({ details }) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <span style={{ color: "black" }}>Date posted: </span>
-            {activeModal.datePosted}
+            {activeModal?.postedDate}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <span style={{ color: "black" }}>Date Resolved: </span>
