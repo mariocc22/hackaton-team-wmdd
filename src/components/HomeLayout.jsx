@@ -29,7 +29,7 @@ console.log(data)
 
                 {
                     data.map((item,index) => (
-                        <Marker key={index} position={{ lat: item.lat, lng: item.lng }} />
+                        <Marker key={index} position={{ lat: item.lat, lng: item.lng }} onClick={()=>{console.log(item.address)}} />
                     ))
                 }
               {/* <Marker position={center} /> */}
