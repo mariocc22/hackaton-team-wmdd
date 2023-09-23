@@ -11,6 +11,7 @@ import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import DetailModal from "./DetailModal";
+import { Link } from "@mui/material";
 
 function HomeLayout({ data }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -22,16 +23,13 @@ function HomeLayout({ data }) {
 
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
-        
       return;
     }
     setActiveMarker(marker);
   };
 
-  
   return (
     <>
-      
       <div className="mapWrapperStyle">
         {!isLoaded ? (
           <h1>Loading...</h1>
@@ -42,26 +40,24 @@ function HomeLayout({ data }) {
               center={center}
               zoom={13}
             >
-              {data.map(
-                (item) => (
-                  
-                  (
-                    <Marker
-                      key={item.id}
-                      position={{ lat: item.lat, lng: item.lng }}
-                      onClick={() => {
-                        handleActiveMarker(item.id);
-                      }}
-                    >
-                      {activeMarker === item.id ? (
-                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                         <DetailModal details={{}} />
-                        </InfoWindow>
-                      ) : null}
-                    </Marker>
-                  )
-                )
-              )}
+              {data.map((item) => (
+                <Marker
+                  key={item.id}
+                  position={{ lat: item.lat, lng: item.lng }}
+                  onClick={() => {
+                    handleActiveMarker(item.id);
+                  }}
+                >
+                  {activeMarker === item.id ? (
+                    <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                      <div>
+                        <h3>Test</h3>
+                        <Link>Report issue</Link>
+                      </div>
+                    </InfoWindow>
+                  ) : null}
+                </Marker>
+              ))}
               {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
