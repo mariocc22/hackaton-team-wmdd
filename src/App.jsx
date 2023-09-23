@@ -39,6 +39,7 @@ function App() {
             value={"mapView"}
             onClick={() => {
               setSelectView("mapView");
+              location.reload();
             }}
             className={selectView == "mapView" && "btn-active"}
           >

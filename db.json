@@ -1,19 +1,21 @@
 {
   "reports": [
     {
-      "id":"1",
+      "id": "1",
       "type": "construction",
+      "postedDate": "09/25/2023",
       "address": "5678 Elm St",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "John Doe",
       "lat": 40.7128,
       "lng": -74.006,
-      "name": "Vancouver"
+      "name": "Metrotown"
     },
     {
-      "id":"2",
+      "id": "2",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
       "image": "../src/assets/img_2.jpg",
@@ -23,8 +25,9 @@
       "name": "Coffee Americana"
     },
     {
-      "id":"3",
+      "id": "3",
       "type": "temporaryClose",
+      "postedDate": "09/25/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
       "image": "../src/assets/img_3.jpg",
@@ -34,8 +37,9 @@
       "name": "Gas station"
     },
     {
-      "id":"4",
+      "id": "4",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-09-05",
       "image": "../src/assets/img_4.jpg",
@@ -45,8 +49,9 @@
       "name": "College of Vancouver"
     },
     {
-      "id":"5",
+      "id": "5",
       "type": "temporaryClose",
+      "postedDate": "09/25/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
       "image": "../src/assets/img_5.jpg",
@@ -56,8 +61,9 @@
       "name": "Amigo cafe"
     },
     {
-      "id":"6",
+      "id": "6",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-07-23",
       "image": "../src/assets/img_1.jpg",
@@ -67,8 +73,9 @@
       "name": "Safeway"
     },
     {
-      "id":"7",
+      "id": "7",
       "type": "construction",
+      "postedDate": "09/25/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-06-10",
       "image": "../src/assets/img_2.jpg",
@@ -78,8 +85,9 @@
       "name": "I love Vancouver"
     },
     {
-      "id":"8",
+      "id": "8",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-05-09",
       "image": "../src/assets/img_3.jpg",
@@ -89,8 +97,9 @@
       "name": "Lovely restaurant"
     },
     {
-      "id":"9",
+      "id": "9",
       "type": "construction",
+      "postedDate": "09/25/2023",
       "address": "789 Cedar Road",
       "endDate": "2022-04-22",
       "image": "../src/assets/img_4.jpg",
@@ -100,8 +109,9 @@
       "name": "Cafe hola"
     },
     {
-      "id":"10",
+      "id": "10",
       "type": "temporaryClose",
+      "postedDate": "09/25/2023",
       "address": "789 Cedar Road",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",
@@ -109,6 +119,30 @@
       "lat": 49.2901,
       "lng": -123.1232,
       "name": "Science world"
+    },
+    {
+      "id": "Last test_id",
+      "type": "Out of Order",
+      "address": "kjerf,erer",
+      "postedDate": "09/25/2023",
+      "endDate": "10/30/2023",
+      "reporterName": "Anonymous",
+      "lat": 49.28885854234304,
+      "lng": -123.11124801635742,
+      "name": "Last test",
+      "image": "../src/assets/img_1.jpg"
+    },
+    {
+      "id": "qweqwe_id",
+      "type": "Out of Order",
+      "address": "307 Seventh Avenue",
+      "postedDate": "09/26/2023",
+      "endDate": "10/30/2023",
+      "reporterName": "Anonymous",
+      "lat": 49.296135757141414,
+      "lng": -123.12807083129883,
+      "name": "qweqwe",
+      "image": "../src/assets/img_1.jpg"
     }
   ]
 }
