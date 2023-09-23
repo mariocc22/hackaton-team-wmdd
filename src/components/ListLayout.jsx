@@ -41,5 +41,9 @@ const ListLayout = ({ data }) => {
                           </li>
                       </div>
                   )))}
-
+              </ul>
+          </div>
+        </div>
+  )
+}
 export default ListLayout;
