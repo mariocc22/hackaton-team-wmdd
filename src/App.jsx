@@ -5,6 +5,7 @@ import data from "../utils/data";
 // import layout components
 import HomeLayout from "./components/HomeLayout";
 import ListLayout from "./components/ListLayout";
+import FormLayout from "./components/FormLayout";
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
@@ -42,10 +43,13 @@ function App() {
         >
           listView
         </button>
+       
+        <button value={"reportForm" } onClick={()=> {setSelectView("reportForm")}}>Report Form</button>
       </div>
 
       {selectView == "mapView" && <HomeLayout />}
       {selectView == "listView" && <ListLayout data={reports} />}
+      {selectView == "reportForm" && <FormLayout />}
     </>
   );
 }

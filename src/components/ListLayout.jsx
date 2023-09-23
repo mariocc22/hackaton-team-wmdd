@@ -21,6 +21,7 @@ const ListLayout = ({ data }) => {
   };
 
   return (
+
     <div className="reportModel" style={{ height: "90vh", width: "90vw" }}>
       <div className="searchField">
         <input
