@@ -16,8 +16,8 @@
       "endDate": "2022-11-15",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Jane Smith",
-      "lat": 41.8781,
-      "lng": -87.6298
+      "lat": 49.2818,
+      "lng": -123.1217
     },
     {
       "type": "temporaryClose",
@@ -25,8 +25,8 @@
       "endDate": "2022-10-20",
       "image": "../src/assets/img_3.jpg",
       "reporterName": "David Johnson",
-      "lat": 34.0522,
-      "lng": -118.2437
+      "lat": 49.2831,
+      "lng": -123.1228
     },
     {
       "type": "outOfOrder",
@@ -34,8 +34,8 @@
       "endDate": "2022-09-05",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "Emily Brown",
-      "lat": 41.2033,
-      "lng": -77.1945
+      "lat": 49.2823,
+      "lng": -123.121
     },
     {
       "type": "temporaryClose",
@@ -43,8 +43,8 @@
       "endDate": "2022-08-14",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Michael Lee",
-      "lat": 40.7128,
-      "lng": -74.006
+      "lat": 49.2813,
+      "lng": -123.1236
     },
     {
       "type": "outOfOrder",
@@ -52,8 +52,8 @@
       "endDate": "2022-07-23",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "Sophia Wilson",
-      "lat": 42.3601,
-      "lng": -71.0589
+      "lat": 49.2816,
+      "lng": -123.1193
     },
     {
       "type": "construction",
@@ -61,8 +61,8 @@
       "endDate": "2022-06-10",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Daniel Garcia",
-      "lat": 34.0522,
-      "lng": -118.2437
+      "lat": 49.2718,
+      "lng": -123.1302
     },
     {
       "type": "outOfOrder",
@@ -70,8 +70,8 @@
       "endDate": "2022-05-09",
       "image": "../src/assets/img_3.jpg",
       "reporterName": "Olivia Martinez",
-      "lat": 41.8781,
-      "lng": -87.6298
+      "lat": 49.2868,
+      "lng": -123.1289
     },
     {
       "type": "construction",
@@ -79,8 +79,8 @@
       "endDate": "2022-04-22",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "William Anderson",
-      "lat": 40.7128,
-      "lng": -74.006
+      "lat": 49.2898,
+      "lng": -123.1244
     },
     {
       "type": "temporaryClose",
@@ -88,8 +88,8 @@
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Sophie Thomas",
-      "lat": 42.3601,
-      "lng": -71.0589
+      "lat": 49.2901,
+      "lng": -123.1232
     }
   ]
 }

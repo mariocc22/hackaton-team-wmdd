@@ -7,12 +7,13 @@ import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import DetailModal from "./DetailModal";
 
-function HomeLayout() {
+function HomeLayout({data}) {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAafj5ZO6dNK-OloRNXjot-Jk4TEgdKZLo",
   });
   const center = useMemo(() => ({ lat: 49.2827, lng: -123.1207 }), []);
 
+console.log(data)
   return (
     <>
       <div className="mapWrapperStyle">
@@ -26,7 +27,13 @@ function HomeLayout() {
               center={center}
               zoom={13}
             >
-              <Marker position={center} />
+
+                {
+                    data.map((item,index) => (
+                        <Marker key={index} position={{ lat: item.lat, lng: item.lng }} onClick={()=>{console.log(item.address)}} />
+                    ))
+                }
+              {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
         )}
