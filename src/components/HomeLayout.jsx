@@ -12,7 +12,7 @@ function HomeLayout() {
 
   return (
     <>
-      <h1>Home</h1>
+      
       <div className="mapWrapperStyle">
         {!isLoaded ? (
           <h1>Loading...</h1>
