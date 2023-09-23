@@ -8,10 +8,9 @@ import { useState } from "react";
 export default function DetailModal({ details }) {
   console.log("details", details);
   const [activeModal, setActiveModal] = useState({
-    name: details.item.name,
-    type: details.item.type,
-    image: details.item.image,
-    postedDate: details.item.postedDate,
+    name: details.item.name ,
+    type: details.item.type ,
+    datePosted: details.item.datePosted ,
     dateResolved: details.item.endDate,
     reportBy: details.item.reporterName,
   });
