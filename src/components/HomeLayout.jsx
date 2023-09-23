@@ -10,7 +10,7 @@ import {
 import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
-import DetailModal from "./DetailModal";
+import { Link } from "@mui/material";
 
 function HomeLayout({ data }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -22,16 +22,13 @@ function HomeLayout({ data }) {
 
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
-        
       return;
     }
     setActiveMarker(marker);
   };
 
-  
   return (
     <>
-      
       <div className="mapWrapperStyle">
         {!isLoaded ? (
           <h1>Loading...</h1>
@@ -42,6 +39,7 @@ function HomeLayout({ data }) {
               center={center}
               zoom={13}
             >
+
               {data.map(
                 (item) => (
                   
@@ -55,13 +53,14 @@ function HomeLayout({ data }) {
                     >
                       {activeMarker === item.id ? (
                         <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                         <DetailModal details={{}} />
+                         <DetailModal details={{item}} />   
                         </InfoWindow>
                       ) : null}
                     </Marker>
                   )
                 )
               )}
+
               {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
