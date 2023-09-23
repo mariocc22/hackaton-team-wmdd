@@ -5,7 +5,7 @@ import data from "../utils/data";
 // import layout components
 import HomeLayout from "./components/HomeLayout";
 import ListLayout from "./components/ListLayout";
-// import FormLayout from "./components/FormLayout";
+import FormLayout from "./components/FormLayout";
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
@@ -13,6 +13,7 @@ import { fetchReports } from "../utils/helpers";
 function App() {
   const [selectView, setSelectView] = useState("mapView");
   const [reports, setReports] = useState([]);
+  const [cordinate, setCordinate] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,12 @@ function App() {
   }, []);
 
   // console.log("this is the data", reports);
+
+  const openFormLayout = (cordinate) => {
+    setSelectView("reportForm");
+    setCordinate(cordinate);
+    console.log("Report issue at: ", cordinate);
+  };
 
   return (
     <>
@@ -43,13 +50,22 @@ function App() {
         >
           listView
         </button>
-       
-        <button value={"reportForm" } onClick={()=> {setSelectView("reportForm")}}>Report Form</button>
+
+        <button
+          value={"reportForm"}
+          onClick={() => {
+            setSelectView("reportForm");
+          }}
+        >
+          Report Form
+        </button>
       </div>
 
-      {selectView == "mapView" && <HomeLayout data={reports} />}
+      {selectView == "mapView" && (
+        <HomeLayout data={reports} openFormLayout={openFormLayout} />
+      )}
       {selectView == "listView" && <ListLayout data={reports} />}
-      {/* {selectView == "reportForm" && <FormLayout />} */}
+      {selectView == "reportForm" && <FormLayout cordinate={cordinate} />}
     </>
   );
 }
