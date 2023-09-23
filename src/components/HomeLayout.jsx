@@ -10,7 +10,6 @@ import {
 import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
-import DetailModal from "./DetailModal";
 import { Link } from "@mui/material";
 
 function HomeLayout({ data, openFormLayout }) {
