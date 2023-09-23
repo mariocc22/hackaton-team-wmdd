@@ -5,7 +5,7 @@ import data from "../utils/data";
 // import layout components
 import HomeLayout from "./components/HomeLayout";
 import ListLayout from "./components/ListLayout";
-import FormLayout from "./components/FormLayout";
+// import FormLayout from "./components/FormLayout";
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
@@ -49,7 +49,7 @@ function App() {
 
       {selectView == "mapView" && <HomeLayout data={reports} />}
       {selectView == "listView" && <ListLayout data={reports} />}
-      {selectView == "reportForm" && <FormLayout />}
+      {/* {selectView == "reportForm" && <FormLayout />} */}
     </>
   );
 }
