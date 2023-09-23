@@ -12,7 +12,6 @@ import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import DetailModal from "./DetailModal";
 import { Link } from "@mui/material";
-import DetailModal from "./DetailModal";
 
 function HomeLayout({ data, openFormLayout }) {
   const [activeMarker, setActiveMarker] = useState(null);

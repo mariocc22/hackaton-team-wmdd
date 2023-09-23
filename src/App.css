@@ -64,6 +64,24 @@ input, textarea, button {
   color:inherit;
 }
 
+#grandcontainer {
+  margin:0 auto;
+  width:600px;
+  min-width:40vw;
+  max-width:69vw;
+  height:85vh;
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem
+}
+
+.top-btns {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1rem;
+}
+
 .card {
   padding: 2em;
 }
@@ -74,11 +92,56 @@ input, textarea, button {
 
 
 .mapWrapperStyle {
-  height: 90vh;
-  width: 90vw;
+  width:100%;
+  height:100%;
+  flex:1;
+  border-radius:10px;
+  overflow:hidden;
 }
 
 .map-Container {
   height: 100%;
   width: 100%;
+}
+
+/* overrides */
+.reportModel {
+  width:auto!important;
+  height:auto!important
+}
+
+#formcontainer {
+  width:80%;
+  margin:auto!important;
+  padding-bottom:10vh;
+}
+
+.searchcont {
+  margin-top:1rem!important
+}
+
+.rdp {
+  align-self:center!important;
+}
+
+#formcontainer button[type="submit"]{
+  width:50%!important;
+  align-self:center
+}
+
+.top-btns button:hover {
+  border:3px solid transparent
+}
+
+.btn-active {
+  background-color:var(--accent-green-light);
+  border:3px solid var(--accent-green)
+}
+
+.btn-active:hover {
+  border:3px solid var(--accent-green)!important
+}
+
+.top-btns button {
+  transition:border-width 0.2s ease-in-out
 }

@@ -33,39 +33,46 @@ function App() {
 
   return (
     <>
-      <div style={{ display: "flex", gap: ".5rem", marginBottom: "" }}>
-        <button
-          value={"mapView"}
-          onClick={() => {
-            setSelectView("mapView");
-          }}
-        >
-          mapView
-        </button>
-        <button
-          value={"listView"}
-          onClick={() => {
-            setSelectView("listView");
-          }}
-        >
-          listView
-        </button>
+      <div id="grandcontainer">
+        <div className="top-btns">
+          <button
+            value={"mapView"}
+            onClick={() => {
+              setSelectView("mapView");
+            }}
+            className={selectView == "mapView" && "btn-active"}
+          >
+            🌎 View Map
+          </button>
+          <button
+            value={"listView"}
+            onClick={() => {
+              setSelectView("listView");
+            }}
+            className={selectView == "listView" && "btn-active"}
+          >
+            📝 Recent Reportings
+          </button>
 
-        <button
-          value={"reportForm"}
-          onClick={() => {
-            setSelectView("reportForm");
-          }}
-        >
-          Report Form
-        </button>
-      </div>
+          <button
+            value={"reportForm"}
+            onClick={() => {
+              setSelectView("reportForm");
+            }}
+            className={selectView == "reportForm" && "btn-active"}
+          >
+            💡 Report a Problem
+          </button>
+        </div>
 
-      {selectView == "mapView" && (
-        <HomeLayout data={reports} openFormLayout={openFormLayout} />
-      )}
-      {selectView == "listView" && <ListLayout data={reports} />}
-      {selectView == "reportForm" && <FormLayout cordinate={cordinate} />}
+        {selectView == "mapView" && (
+          <HomeLayout data={reports} openFormLayout={openFormLayout} />
+        )}
+        {selectView == "listView" && <ListLayout data={reports} />}
+        {selectView == "reportForm" && <FormLayout cordinate={cordinate} />}
+      </div>{/* end grandcontainer */}
+
+      
     </>
   );
 }
