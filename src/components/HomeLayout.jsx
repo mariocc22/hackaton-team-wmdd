@@ -10,11 +10,14 @@ import {
 import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
+import DetailModal from "./DetailModal";
 import { Link } from "@mui/material";
 import DetailModal from "./DetailModal";
 
-function HomeLayout({ data }) {
+function HomeLayout({ data, openFormLayout }) {
   const [activeMarker, setActiveMarker] = useState(null);
+
+  const [infoWindowContent, setInfoWindowContent] = useState(null);
 
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAafj5ZO6dNK-OloRNXjot-Jk4TEgdKZLo",
@@ -28,6 +31,27 @@ function HomeLayout({ data }) {
     setActiveMarker(marker);
   };
 
+  const handleMapClick = (event) => {
+    console.log("map clicked!", event);
+    if (event.placeId) {
+      const content = (
+        <div>
+          <strong>You clicked place</strong>
+          <br />
+          Place ID: {event.placeId}
+          <br />
+          Position: {event.latLng.lat()}, {event.latLng.lng()}
+          <br />
+          <button href="#" onClick={()=>openFormLayout({lat:event.latLng.lat(), lon:event.latLng.lng()})}>
+            Report issue
+          </button>
+          <br />
+        </div>
+      );
+      setInfoWindowContent(content);
+    }
+  };
+
   return (
     <>
       <div className="mapWrapperStyle">
@@ -39,30 +63,41 @@ function HomeLayout({ data }) {
               mapContainerClassName="map-Container"
               center={center}
               zoom={13}
+              onClick={handleMapClick}
             >
-
-              {data.map(
-                (item) => (
-                  
-                  (
-                    <Marker
-                      key={item.id}
-                      position={{ lat: item.lat, lng: item.lng }}
-                      onClick={() => {
-                        handleActiveMarker(item.id);
-                      }}
-                    >
-                      {activeMarker === item.id ? (
-                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                         <DetailModal details={{item}} />   
-                        </InfoWindow>
-                      ) : null}
-                    </Marker>
-                  )
-                )
+              {data.map((item) => (
+                <Marker
+                  key={item.id}
+                  position={{ lat: item.lat, lng: item.lng }}
+                  onClick={() => {
+                    handleActiveMarker(item.id);
+                  }}
+                >
+                  {activeMarker === item.id ? (
+                    <InfoWindow>
+                      <DetailModal details={{ item }} />
+                    </InfoWindow>
+                  ) : null}
+                </Marker>
+              ))}
+              {/* <Marker
+                position={{ lat: 49.284445661037054, lng: -123.1246298889249 }}
+              >
+                <InfoWindow>
+                  <Link
+                    onClick={() => {
+                      console.info("I'm a button.");
+                    }}
+                  >
+                    Report issue
+                  </Link>
+                </InfoWindow>
+              </Marker> */}
+              {infoWindowContent && (
+                <InfoWindow position={center}>
+                  <div>{infoWindowContent}</div>
+                </InfoWindow>
               )}
-
-              {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
         )}
