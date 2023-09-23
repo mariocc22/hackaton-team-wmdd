@@ -1,19 +1,21 @@
 
-{
+const data={
   "reports": [
     {
       "type": "construction",
       "address": "5678 Elm St",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
-      "reporterName": "John Doe"
+      "reporterName": "John Doe",
+      "city":"vancouver"
     },
     {
       "type": "outOfOrder",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
       "image": "../src/assets/img_2.jpg",
-      "reporterName": "Jane Smith"
+      "reporterName": "Jane Smith",
+      "city":"vancouver"
     },
     {
       "type": "construction",
@@ -73,3 +75,5 @@
     }
   ]
 }
+
+ export default data

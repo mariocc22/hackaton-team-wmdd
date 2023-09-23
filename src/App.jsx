@@ -2,12 +2,10 @@
 import { useState, useEffect } from "react";
 
 import "./App.css";
-
+import  data from '../utils/data'
 // import layout components
 import HomeLayout from './components/HomeLayout'
 import ListLayout from "./components/ListLayout";
-
-
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
@@ -16,6 +14,7 @@ import { fetchReports } from "../utils/helpers";
 function App() {
   const [selectView, setSelectView] = useState("mapView");
   const [reports, setReports] = useState([]);
+
   
   
 
@@ -27,6 +26,8 @@ function App() {
     fetchData();
   }, []);
 
+  console.log('this is the data',reports)
+
   return (
     <>
       <div style={{ display: "flex", gap: ".5rem", marginBottom: "" }}>
@@ -35,10 +36,7 @@ function App() {
       </div>
 
       {selectView == "mapView" && <HomeLayout />}
-      {selectView == "listView" && <ListLayout /> }
-
-
-
+      {selectView == "listView" &&  <ListLayout data={data.reports} />}
 
     </>
   );
