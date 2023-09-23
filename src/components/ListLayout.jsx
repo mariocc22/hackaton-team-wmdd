@@ -144,19 +144,52 @@ const ListLayout = ({ data }) => {
                 </li>
                 
             ))):(filterData.map((item, index) => (
-                <li className="data" key={index}>
+              <li className="data" key={index} data-key={item.id}>
+                <div className="data_flex">
+                  <div className="data_text">
                   <div className="data_row">
-                    <span> {item.type}</span>
+                      <b>Place:</b>
+                      <span> {item.name}</span>
+                    </div>
+
+                    <div className="data_row">
+                      <b>Address:</b>
+                      <span> {item.address}</span>
+                    </div>
+
+                    <div className="data_row">
+                      <b>Problem Type:</b>
+                      <span> {
+                        item.type === "outOfOrder" ? "Out of order" :
+                        item.type === "temporaryClose" ? "Temporarily Closed" :
+                        item.type === "construction" ? "Construction" :
+                        "Other"
+                      }</span>
+                    </div>
+
+                    <div className="data_row">
+                      <img src={item.image} alt={"image"}/>
+                    </div>
+
+                    <div className="data_row">
+                      <b>Reported by:</b>
+                      <span> {item.reporterName}</span>
+                    </div>
+                    
                   </div>
 
-                  <div className="data_row">
-                    <span> {
-                      item.type === "outOfOrder" ? "Out of order" :
-                      item.type === "temporaryClose" ? "Temporarily Closed" :
-                      "Default Value"
-                    }</span>
+                  <div className="right">
+                    <p>Did you find<br/>this helpful?</p>
+                    
+                    <div className="thumbs">
+                      <IconThumbUp onClick={upvote} size={22} color="var(--text)" stroke={2}/>
+                      <IconSlash size={22} color="var(--text)" stroke={2}/>
+                      <IconThumbDown onClick={downvote} size={22} color="var(--text)" stroke={2}/>
+                    </div>
+                    
                   </div>
-                </li>
+                </div>
+              </li>
             )))}
             {/* {filterData.map((item, index) => (
               <div className="data" key={index}>
