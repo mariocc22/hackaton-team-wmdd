@@ -11,6 +11,7 @@ export default function DetailModal({ details }) {
   const [activeModal, setActiveModal] = useState({
     name: details.item.name ,
     type: details.item.type ,
+    image: details.item.image ,
     datePosted: details.item.datePosted ,
     dateResolved: details.item.endDate,
     reportBy: details.item.reporterName 
@@ -40,7 +41,7 @@ export default function DetailModal({ details }) {
         <CardMedia
           component="img"
           height="140"
-          image="/src/assets/img_2.jpg"
+          image={activeModal.image}
           alt="green iguana"
         />
         <CardContent>
