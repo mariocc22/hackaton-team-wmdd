@@ -14,9 +14,9 @@ const ListLayout = ({ data }) => {
 
   const getFilter = () => {
     const searchCity = city.toLowerCase();
-    const fetchData = data.filter(
-      (item) => item?.name?.toLowerCase() === searchCity
-    );
+    const fetchData = !data
+      ? null
+      : data.filter((item) => item?.name?.toLowerCase() === searchCity);
     setFilterData(fetchData);
   };
 

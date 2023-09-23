@@ -44,7 +44,7 @@ function App() {
         </button>
       </div>
 
-      {selectView == "mapView" && <HomeLayout />}
+      {selectView == "mapView" && <HomeLayout data={reports} />}
       {selectView == "listView" && <ListLayout data={reports} />}
     </>
   );

@@ -1,7 +1,7 @@
 {
   "reports": [
     {
-      "id":"1",
+      "id": "1",
       "type": "construction",
       "address": "5678 Elm St",
       "endDate": "2022-12-31",
@@ -12,7 +12,7 @@
       "name": "Vancouver"
     },
     {
-      "id":"2",
+      "id": "2",
       "type": "outOfOrder",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
@@ -22,7 +22,7 @@
       "lng": -123.1217
     },
     {
-      "id":"3",
+      "id": "3",
       "type": "temporaryClose",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
@@ -32,7 +32,7 @@
       "lng": -123.1228
     },
     {
-      "id":"4",
+      "id": "4",
       "type": "outOfOrder",
       "address": "9876 Oak Ave",
       "endDate": "2022-09-05",
@@ -42,7 +42,7 @@
       "lng": -123.121
     },
     {
-      "id":"5",
+      "id": "5",
       "type": "temporaryClose",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
@@ -52,7 +52,7 @@
       "lng": -123.1236
     },
     {
-      "id":"6",
+      "id": "6",
       "type": "outOfOrder",
       "address": "321 Elmwood Dr",
       "endDate": "2022-07-23",
@@ -62,7 +62,7 @@
       "lng": -123.1193
     },
     {
-      "id":"7",
+      "id": "7",
       "type": "construction",
       "address": "654 Pine Lane",
       "endDate": "2022-06-10",
@@ -72,7 +72,7 @@
       "lng": -123.1302
     },
     {
-      "id":"8",
+      "id": "8",
       "type": "outOfOrder",
       "address": "654 Pine Lane",
       "endDate": "2022-05-09",
@@ -82,7 +82,7 @@
       "lng": -123.1289
     },
     {
-      "id":"9",
+      "id": "9",
       "type": "construction",
       "address": "789 Cedar Road",
       "endDate": "2022-04-22",
@@ -92,7 +92,7 @@
       "lng": -123.1244
     },
     {
-      "id":"10",
+      "id": "10",
       "type": "temporaryClose",
       "address": "789 Cedar Road",
       "endDate": "2022-03-30",
