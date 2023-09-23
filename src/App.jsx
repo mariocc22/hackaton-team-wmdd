@@ -43,8 +43,15 @@ function App() {
         >
           listView
         </button>
-       
-        <button value={"reportForm" } onClick={()=> {setSelectView("reportForm")}}>Report Form</button>
+
+        <button
+          value={"reportForm"}
+          onClick={() => {
+            setSelectView("reportForm");
+          }}
+        >
+          Report Form
+        </button>
       </div>
 
       {selectView == "mapView" && <HomeLayout data={reports} />}

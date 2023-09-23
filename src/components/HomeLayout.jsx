@@ -9,8 +9,8 @@ import {
 } from "@react-google-maps/api";
 import { useMemo, useState } from "react";
 import "../../src/App.css";
-import OpenReportModal from "./OpenReportModal";
 import { Link } from "@mui/material";
+import DetailModal from "./DetailModal";
 
 function HomeLayout({ data }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -39,27 +39,21 @@ function HomeLayout({ data }) {
               center={center}
               zoom={13}
             >
-
-              {data.map(
-                (item) => (
-                  
-                  (
-                    <Marker
-                      key={item.id}
-                      position={{ lat: item.lat, lng: item.lng }}
-                      onClick={() => {
-                        handleActiveMarker(item.id);
-                      }}
-                    >
-                      {activeMarker === item.id ? (
-                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                         <DetailModal details={{item}} />   
-                        </InfoWindow>
-                      ) : null}
-                    </Marker>
-                  )
-                )
-              )}
+              {data.map((item) => (
+                <Marker
+                  key={item.id}
+                  position={{ lat: item.lat, lng: item.lng }}
+                  onClick={() => {
+                    handleActiveMarker(item.id);
+                  }}
+                >
+                  {activeMarker === item.id ? (
+                    <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                      <DetailModal details={{ item }} />
+                    </InfoWindow>
+                  ) : null}
+                </Marker>
+              ))}
 
               {/* <Marker position={center} /> */}
             </GoogleMap>

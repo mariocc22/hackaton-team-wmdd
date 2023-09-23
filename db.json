@@ -1,8 +1,25 @@
 {
   "reports": [
     {
+      "id": "dsdfds_id",
+      "type": "Temporarily Closed",
+      "postedDate": "09/23/2023",
+      "address": "sdfsdf",
+      "endDate": "10/30/2023",
+      "reporterName": "Anonymous",
+      "lat": 49.2774,
+      "lng": -123.1466,
+      "name": "dsdfds",
+      "image": "../src/assets/img_1.jpg"
+    }
+  ]
+}
+{
+  "reports": [
+    {
       "id":"1",
       "type": "construction",
+      "postedDate": "09/23/2023",
       "address": "5678 Elm St",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
@@ -14,6 +31,7 @@
     {
       "id":"2",
       "type": "outOfOrder",
+      "postedDate": "09/23/2023",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
       "image": "../src/assets/img_2.jpg",
@@ -25,6 +43,7 @@
     {
       "id":"3",
       "type": "temporaryClose",
+      "postedDate": "09/23/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
       "image": "../src/assets/img_3.jpg",
@@ -36,6 +55,7 @@
     {
       "id":"4",
       "type": "outOfOrder",
+      "postedDate": "09/23/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-09-05",
       "image": "../src/assets/img_4.jpg",
@@ -47,6 +67,7 @@
     {
       "id":"5",
       "type": "temporaryClose",
+      "postedDate": "09/23/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
       "image": "../src/assets/img_5.jpg",
@@ -58,6 +79,7 @@
     {
       "id":"6",
       "type": "outOfOrder",
+      "postedDate": "09/23/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-07-23",
       "image": "../src/assets/img_1.jpg",
@@ -69,6 +91,7 @@
     {
       "id":"7",
       "type": "construction",
+      "postedDate": "09/23/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-06-10",
       "image": "../src/assets/img_2.jpg",
@@ -80,6 +103,7 @@
     {
       "id":"8",
       "type": "outOfOrder",
+      "postedDate": "09/23/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-05-09",
       "image": "../src/assets/img_3.jpg",
@@ -91,6 +115,7 @@
     {
       "id":"9",
       "type": "construction",
+      "postedDate": "09/23/2023",
       "address": "789 Cedar Road",
       "endDate": "2022-04-22",
       "image": "../src/assets/img_4.jpg",
@@ -102,6 +127,7 @@
     {
       "id":"10",
       "type": "temporaryClose",
+      "postedDate": "09/23/2023",
       "address": "789 Cedar Road",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",

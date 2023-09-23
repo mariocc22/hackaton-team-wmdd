@@ -50,5 +50,19 @@ const updateReport = async (id, property) => {
   return data;
 };
 
+// create a function that gives you lat and lng from a random address in canada the lat range is 49.2 to 49.3 and the lng range is -123.1 to -123.2 4 decimals
+const randomAddress = () => {
+  const lat = (Math.random() * (49.3 - 49.2) + 49.2).toFixed(4);
+  const lng = (Math.random() * (-123.1 - -123.2) + -123.2).toFixed(4);
+  return { lat, lng };
+};
+
 // export
-export { fetchReports, fetchReport, addReport, deleteReport, updateReport };
+export {
+  fetchReports,
+  fetchReport,
+  addReport,
+  deleteReport,
+  updateReport,
+  randomAddress,
+};
