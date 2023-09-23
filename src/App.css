@@ -52,8 +52,9 @@ body {
 :root {
   --accent-green:#bfd8ad;
   --accent-green-light:#dae8d0;
+  --accent-red:#fa8072;
   --text:#444b5c;
-  --borders:#dedfe4;
+  --borders:#eee;
   --background:#fcfcfc;
 }
 
