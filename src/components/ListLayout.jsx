@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-const ListLayout = ({data}) => {
-    const [city, setCity] = useState('')
-    const [filterData, setFilterData]=useState([{}])
-    const getCity = (event) => {
-        setCity(event.target.value)
-        console.log(city)
-        // console.log(data)
-        // getFilter()
-    }
-
+const ListLayout = ({ data }) => {
+  const [city, setCity] = useState("");
+  const [filterData, setFilterData] = useState([{}]);
+ 
+  const getCity = (event) => {
+    setCity(event.target.value);
+  };
     useEffect(() => {
         getFilter()
     },[city])
@@ -44,11 +41,5 @@ const ListLayout = ({data}) => {
                           </li>
                       </div>
                   )))}
-        </ul>
-          </div>
-          
-      </div>
-  )
-}
 
-export default ListLayout
+export default ListLayout;
