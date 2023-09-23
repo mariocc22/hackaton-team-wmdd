@@ -18,6 +18,15 @@ export default function DetailModal({ details }) {
 
   console.log("activeModal", activeModal);
 
+  // create a function to get a random number from 1 to 5
+  const randNum = () => {
+    const randomDecimal = Math.random();
+
+    // Scale the random decimal to be between 1 and 5
+    const randomNumber = Math.floor(randomDecimal * 5) + 1;
+    return randomNumber;
+  };
+
   // const detailsPlace = {
   //   name: details.name ,
   //   type: details.type ,

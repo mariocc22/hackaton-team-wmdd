@@ -3,8 +3,8 @@
     {
       "id": "1",
       "type": "construction",
-      "address": "5678 Elm St",
       "postedDate": "09/25/2023",
+      "address": "5678 Elm St",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "John Doe",
@@ -15,9 +15,9 @@
     {
       "id": "2",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Jane Smith",
       "lat": 49.2818,
@@ -27,9 +27,9 @@
     {
       "id": "3",
       "type": "temporaryClose",
+      "postedDate": "09/25/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_3.jpg",
       "reporterName": "David Johnson",
       "lat": 49.2831,
@@ -39,9 +39,9 @@
     {
       "id": "4",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "9876 Oak Ave",
       "endDate": "2022-09-05",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "Emily Brown",
       "lat": 49.2823,
@@ -51,9 +51,9 @@
     {
       "id": "5",
       "type": "temporaryClose",
+      "postedDate": "09/25/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Michael Lee",
       "lat": 49.2813,
@@ -63,9 +63,9 @@
     {
       "id": "6",
       "type": "outOfOrder",
+      "postedDate": "09/25/2023",
       "address": "321 Elmwood Dr",
       "endDate": "2022-07-23",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_1.jpg",
       "reporterName": "Sophia Wilson",
       "lat": 49.2816,
@@ -75,9 +75,9 @@
     {
       "id": "7",
       "type": "construction",
+      "postedDate": "09/25/2023",
       "address": "654 Pine Lane",
       "endDate": "2022-06-10",
-      "postedDate": "09/25/2023",
       "image": "../src/assets/img_2.jpg",
       "reporterName": "Daniel Garcia",
       "lat": 49.2718,
@@ -87,8 +87,8 @@
     {
       "id": "8",
       "type": "outOfOrder",
-      "address": "654 Pine Lane",
       "postedDate": "09/25/2023",
+      "address": "654 Pine Lane",
       "endDate": "2022-05-09",
       "image": "../src/assets/img_3.jpg",
       "reporterName": "Olivia Martinez",
@@ -99,8 +99,8 @@
     {
       "id": "9",
       "type": "construction",
-      "address": "789 Cedar Road",
       "postedDate": "09/25/2023",
+      "address": "789 Cedar Road",
       "endDate": "2022-04-22",
       "image": "../src/assets/img_4.jpg",
       "reporterName": "William Anderson",
@@ -111,8 +111,8 @@
     {
       "id": "10",
       "type": "temporaryClose",
-      "address": "789 Cedar Road",
       "postedDate": "09/25/2023",
+      "address": "789 Cedar Road",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",
       "reporterName": "Sophie Thomas",
@@ -130,6 +130,18 @@
       "lat": 49.28885854234304,
       "lng": -123.11124801635742,
       "name": "Last test",
+      "image": "../src/assets/img_1.jpg"
+    },
+    {
+      "id": "qweqwe_id",
+      "type": "Out of Order",
+      "address": "307 Seventh Avenue",
+      "postedDate": "09/26/2023",
+      "endDate": "10/30/2023",
+      "reporterName": "Anonymous",
+      "lat": 49.296135757141414,
+      "lng": -123.12807083129883,
+      "name": "qweqwe",
       "image": "../src/assets/img_1.jpg"
     }
   ]

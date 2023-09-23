@@ -18,7 +18,6 @@ const FormLayout = ({ cordinate }) => {
   const [selected, setSelected] = useState(new Date());
 
   console.log("cordinate", cordinate);
-
   let footer = <p>Please pick a day.</p>;
   if (selected) {
     footer = <p>You picked {format(selected, "PP")}.</p>;
@@ -39,7 +38,6 @@ const FormLayout = ({ cordinate }) => {
       // do stuff with the form
       setPopup(!popup);
     }
-
     const coordinates = cordinate;
 
     // add it to the server
