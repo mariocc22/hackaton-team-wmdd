@@ -1,4 +1,8 @@
-import { GoogleMap, useLoadScript } from "@react-google-maps/api";
+
+import React from "react";
+import { Wrapper } from "@googlemaps/react-wrapper";
+
+import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { useMemo } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
@@ -11,20 +15,19 @@ function HomeLayout() {
 
   return (
     <>
-      <h1>Home</h1>
-      <OpenReportModal />
       <div className="mapWrapperStyle">
         {!isLoaded ? (
           <h1>Loading...</h1>
         ) : (
-          <GoogleMap
-            mapContainerClassName="map-Container"
-            center={center}
-            zoom={13}
-            onClick={(e) => {
-              console.log("this is the info!", e);
-            }}
-          />
+          <Wrapper libraries={["marker"]}>
+            <GoogleMap
+              mapContainerClassName="map-Container"
+              center={center}
+              zoom={13}
+            >
+              <Marker position={center} />
+            </GoogleMap>
+          </Wrapper>
         )}
       </div>
     </>

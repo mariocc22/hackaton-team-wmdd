@@ -1,22 +1,24 @@
 
-{
+const data={
   "reports": [
     {
       "type": "construction",
       "address": "5678 Elm St",
       "endDate": "2022-12-31",
       "image": "../src/assets/img_1.jpg",
-      "reporterName": "John Doe"
+      "reporterName": "John Doe",
+      "city":"vancouver"
     },
     {
       "type": "outOfOrder",
       "address": "2344 Elm St",
       "endDate": "2022-11-15",
       "image": "../src/assets/img_2.jpg",
-      "reporterName": "Jane Smith"
+      "reporterName": "Jane Smith",
+      "city":"vancouver"
     },
     {
-      "type": "temporaryClose",
+      "type": "construction",
       "address": "9876 Oak Ave",
       "endDate": "2022-10-20",
       "image": "../src/assets/img_3.jpg",
@@ -30,7 +32,7 @@
       "reporterName": "Emily Brown"
     },
     {
-      "type": "temporaryClose",
+      "type": "construction",
       "address": "321 Elmwood Dr",
       "endDate": "2022-08-14",
       "image": "../src/assets/img_5.jpg",
@@ -65,7 +67,7 @@
       "reporterName": "William Anderson"
     },
     {
-      "type": "temporaryClose",
+      "type": "outOfOrder",
       "address": "789 Cedar Road",
       "endDate": "2022-03-30",
       "image": "../src/assets/img_5.jpg",
@@ -73,3 +75,5 @@
     }
   ]
 }
+
+ export default data

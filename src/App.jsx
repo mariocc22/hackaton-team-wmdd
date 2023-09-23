@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
+import "./App.css";
+import  data from '../utils/data'
 // import layout components
-import HomeLayout from "./components/HomeLayout";
+import HomeLayout from './components/HomeLayout'
+import ListLayout from "./components/ListLayout";
+
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectView, setSelectView] = useState("mapView");
   const [reports, setReports] = useState([]);
+
+  
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,11 +24,17 @@ function App() {
     fetchData();
   }, []);
 
-  console.log(reports);
+  console.log('this is the data',reports)
 
   return (
     <>
-      <HomeLayout />
+      <div style={{ display: "flex", gap: ".5rem", marginBottom: "" }}>
+        <button value={"mapView"} onClick={()=> {setSelectView("mapView")}}>mapView</button>
+        <button value={"listView" } onClick={()=> {setSelectView("listView")}}>listView</button>
+      </div>
+
+      {selectView == "mapView" && <HomeLayout />}
+      {selectView == "listView" &&  <ListLayout data={data.reports} />}
     </>
   );
 }
