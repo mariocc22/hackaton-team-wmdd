@@ -55,7 +55,7 @@ function HomeLayout({ data }) {
                     >
                       {activeMarker === item.id ? (
                         <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-                         <DetailModal details={{}} />
+                         <DetailModal details={{item}} />   
                         </InfoWindow>
                       ) : null}
                     </Marker>

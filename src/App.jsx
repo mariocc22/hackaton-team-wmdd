@@ -21,7 +21,7 @@ function App() {
     fetchData();
   }, []);
 
-  console.log("this is the data", reports);
+  // console.log("this is the data", reports);
 
   return (
     <>
@@ -44,7 +44,7 @@ function App() {
         </button>
       </div>
 
-      {selectView == "mapView" && <HomeLayout />}
+      {selectView == "mapView" && <HomeLayout data={reports} />}
       {selectView == "listView" && <ListLayout data={reports} />}
     </>
   );
