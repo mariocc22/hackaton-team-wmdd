@@ -6,22 +6,23 @@ import "./ListLayout.css"
 const ListLayout = ({ data }) => {
   const [city, setCity] = useState("");
   const [filterData, setFilterData] = useState([{}]);
-
+ 
   const getCity = (event) => {
     setCity(event.target.value);
   };
-
-  useEffect(() => {
-    getFilter();
-  }, [city]);
-
-  const getFilter = () => {
-    const searchCity = city.toLowerCase();
-    const fetchData = data.filter(
-      (item) => item?.name?.toLowerCase() === searchCity
-    );
-    setFilterData(fetchData);
-  };
+  
+    useEffect(() => {
+        getFilter()
+    },[city])
+    
+    const getFilter = () =>
+    { 
+        console.log(city)
+        const fetchData = data.filter(item => item.city == city)
+        setFilterData(fetchData)
+        console.log(fetchData)
+ 
+    }
 
   const searchSubmit = (e) => {
     e.preventDefault();
