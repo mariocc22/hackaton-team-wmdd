@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.mapWrapperStyle {
+  height: 90vh;
+  width: 90vw;
+}
+
+.map-Container {
+  height: 100%;
+  width: 100%;
+}
