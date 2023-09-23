@@ -1,0 +1,168 @@
+.searchcont {
+    margin:10vh auto;
+    min-width:40vw;
+    max-width:69vw;
+    width:540px;
+    display:flex;
+    flex-direction:column;
+}
+
+.searchcont, .searchcont * {
+    box-sizing:border-box;
+}
+
+.searchField {
+    position:relative;
+    display:flex;
+    align-items:stretch;
+}
+
+.searchField input {
+    display:block;
+    outline:none;
+    background:var(--background);
+    border:1px solid var(--borders);
+    box-shadow:2px 2px 10px rgba(0,0,0,15%);
+    padding:1.25rem 1rem 1.25rem 1rem;
+    border-radius:5px;
+    width:100%;
+}
+
+.searchField .btnh {
+    position:absolute;
+    top:0;right:0;
+    margin-right:calc(1px + 1rem);
+    display:flex;
+    align-items:center;
+    height:100%;
+}
+
+.searchField button {
+    font-family:"Bricolage Grotesque SemiBold";
+    border:1px solid var(--borders)
+}
+
+.showData {
+    margin-top:2rem;
+    margin-bottom:10vh
+}
+
+.showData ul {
+    text-align:initial;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.showData b {
+    font-weight:normal;
+    font-family:"Bricolage Grotesque SemiBold"
+}
+
+.data {
+    background:var(--background);
+    padding:1.5rem;
+    border-radius:7px;
+    box-shadow:2px 2px 10px rgba(0,0,0,15%);
+}
+
+.data + .data {
+    margin-top:1.5rem
+}
+
+.data img {
+    display:block;
+    width:40%;
+    max-width:100%;
+    border-radius:4px;
+    margin:0.69rem 0;
+    box-shadow:2px 2px 10px rgba(0,0,0,15%);
+}
+
+.data_flex {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.data_text {
+    flex:1;
+}
+
+.data .right {
+    display:flex;
+    flex-direction:column;
+    align-self:flex-end;
+}
+
+.data .right p {
+    margin-top:0;
+    margin-bottom:0.35em
+}
+
+.data .thumbs {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end
+}
+
+.data .thumbs svg {
+    padding:0.5rem;
+    cursor:pointer;
+    box-sizing:content-box;
+}
+
+.data .thumbs .tabler-icon-slash {
+    margin:0 -0.5rem;
+    padding:0;
+    cursor:default;
+    opacity:0.25;
+}
+
+/*------------------------*/
+
+#ok-popup {
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:100vh;
+    display:grid;
+    place-items:center;
+    backdrop-filter:blur(3px);
+    z-index:69;
+}
+
+#ok-popup:before {
+    content:"";
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    background:var(--background);
+    opacity:0.69;
+    z-index:-1;
+}
+
+.btns {
+    display:grid;
+    place-items:center;
+}
+
+.popup-box {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    min-width:38vw;
+    width:500px;
+    padding:30px;
+    border-radius:1.25rem;
+    box-shadow:7px 7px 30px rgba(0,0,0,15%);
+    background:var(--background);
+    max-width:65vw;
+}
+
+.popup-box button {
+    font-family:"Bricolage Grotesque SemiBold";
+    background:var(--accent-green-light);
+    color:var(--text)
+}
