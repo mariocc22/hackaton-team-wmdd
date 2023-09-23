@@ -3,11 +3,9 @@ import { useEffect, useState } from "react";
 const ListLayout = ({ data }) => {
   const [city, setCity] = useState("");
   const [filterData, setFilterData] = useState([{}]);
+
   const getCity = (event) => {
     setCity(event.target.value);
-    console.log(city);
-    // console.log(data)
-    // getFilter()
   };
 
   useEffect(() => {
@@ -15,11 +13,13 @@ const ListLayout = ({ data }) => {
   }, [city]);
 
   const getFilter = () => {
-    console.log(city);
-    const fetchData = data.filter((item) => item.city == city);
+    const searchCity = city.toLowerCase();
+    const fetchData = data.filter(
+      (item) => item?.name?.toLowerCase() === searchCity
+    );
     setFilterData(fetchData);
-    console.log(fetchData);
   };
+
   return (
     <div className="reportModel" style={{ height: "90vh", width: "90vw" }}>
       <div className="searchField">

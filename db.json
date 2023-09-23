@@ -7,7 +7,8 @@
       "image": "../src/assets/img_1.jpg",
       "reporterName": "John Doe",
       "lat": 40.7128,
-      "lng": -74.006
+      "lng": -74.006,
+      "name": "Vancouver"
     },
     {
       "type": "outOfOrder",
