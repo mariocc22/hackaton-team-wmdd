@@ -33,14 +33,29 @@ const ListLayout = ({ data }) => {
       </div>
       <div className="showData">
         <ul>
-          {filterData.map((item, index) => (
+            {filterData.length==0?(data.map((item, index) => (
             <div className="data" key={index}>
               <li>
                 <p>{item.type} </p>
                 <p>{item.address}</p>
               </li>
             </div>
-          ))}
+          ))):(filterData.map((item, index) => (
+            <div className="data" key={index}>
+              <li>
+                <p>{item.type} </p>
+                <p>{item.address}</p>
+              </li>
+            </div>
+          )))}
+          {/* {filterData.map((item, index) => (
+            <div className="data" key={index}>
+              <li>
+                <p>{item.type} </p>
+                <p>{item.address}</p>
+              </li>
+            </div>
+          ))} */}
         </ul>
       </div>
     </div>

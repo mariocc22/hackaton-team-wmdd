@@ -11,6 +11,7 @@ import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import { Link } from "@mui/material";
+import DetailModal from "./DetailModal";
 
 function HomeLayout({ data }) {
   const [activeMarker, setActiveMarker] = useState(null);
