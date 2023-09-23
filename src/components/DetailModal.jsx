@@ -1,4 +1,3 @@
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,17 +13,26 @@ export default function DetailModal({ details }) {
     image: details.item.image ,
     datePosted: details.item.datePosted ,
     dateResolved: details.item.endDate,
-    reportBy: details.item.reporterName 
+    reportBy: details.item.reporterName,
   });
 
   console.log("activeModal", activeModal);
+
+  // create a function to get a random number from 1 to 5
+  const randNum = () => {
+    const randomDecimal = Math.random();
+
+    // Scale the random decimal to be between 1 and 5
+    const randomNumber = Math.floor(randomDecimal * 5) + 1;
+    return randomNumber;
+  };
 
   // const detailsPlace = {
   //   name: details.name ,
   //   type: details.type ,
   //   datePosted: details.datePosted ,
   //   dateResolved: details.dateResolved,
-  //   reportBy: details.reportBy 
+  //   reportBy: details.reportBy
   // };
   // console.log("detailsPlace", detailsPlace);
   // const detailsPlace = {
@@ -74,4 +82,3 @@ export default function DetailModal({ details }) {
     </Card>
   );
 }
-
