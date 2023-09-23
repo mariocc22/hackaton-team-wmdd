@@ -80,6 +80,7 @@ button:focus, button:focus-visible {
 }
 
 .popup-box button {
+    font-family:"Bricolage Grotesque SemiBold";
     background:var(--accent-green-light);
     color:var(--text)
 }

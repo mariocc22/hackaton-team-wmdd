@@ -34,7 +34,8 @@
 }
 
 /*--- FONTS ---*/
-@font-face {font-family: "Bricolage Grotesque"; src: url("../src/assets/fonts/BricolageGrotesque-Light.ttf");}
+@font-face {font-family: "Bricolage Grotesque Regular"; src: url("../src/assets/fonts/BricolageGrotesque-Regular.ttf");}
+@font-face {font-family: "Bricolage Grotesque SemiBold"; src: url("../src/assets/fonts/BricolageGrotesque-SemiBold.ttf");}
 @font-face {font-family: "Unbounded"; src: url("../src/assets/fonts/Unbounded-Medium.ttf");}
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family:"Bricolage Grotesque", sans-serif;
+  font-family:"Bricolage Grotesque Regular", sans-serif;
   font-size:0.95rem;
   color:var(--text)
 }
