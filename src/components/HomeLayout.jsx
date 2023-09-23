@@ -1,38 +1,67 @@
 import React from "react";
 import { Wrapper } from "@googlemaps/react-wrapper";
 
-import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
+import {
+  GoogleMap,
+  Marker,
+  useLoadScript,
+  InfoWindow,
+} from "@react-google-maps/api";
+import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import DetailModal from "./DetailModal";
 
-function HomeLayout({data}) {
+function HomeLayout({ data }) {
+  const [activeMarker, setActiveMarker] = useState(null);
+
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAafj5ZO6dNK-OloRNXjot-Jk4TEgdKZLo",
   });
   const center = useMemo(() => ({ lat: 49.2827, lng: -123.1207 }), []);
 
-console.log(data)
+  const handleActiveMarker = (marker) => {
+    if (marker === activeMarker) {
+        
+      return;
+    }
+    setActiveMarker(marker);
+  };
+
+  
   return (
     <>
+      
       <div className="mapWrapperStyle">
         {!isLoaded ? (
           <h1>Loading...</h1>
         ) : (
           <Wrapper libraries={["marker"]}>
-            <DetailModal details={{}} />
             <GoogleMap
               mapContainerClassName="map-Container"
               center={center}
               zoom={13}
             >
-
-                {
-                    data.map((item,index) => (
-                        <Marker key={index} position={{ lat: item.lat, lng: item.lng }} onClick={()=>{console.log(item.address)}} />
-                    ))
-                }
+              {data.map(
+                (item) => (
+                  
+                  (
+                    <Marker
+                      key={item.id}
+                      position={{ lat: item.lat, lng: item.lng }}
+                      onClick={() => {
+                        handleActiveMarker(item.id);
+                      }}
+                    >
+                      {activeMarker === item.id ? (
+                        <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+                         <DetailModal details={{}} />
+                        </InfoWindow>
+                      ) : null}
+                    </Marker>
+                  )
+                )
+              )}
               {/* <Marker position={center} /> */}
             </GoogleMap>
           </Wrapper>
