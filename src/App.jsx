@@ -6,6 +6,7 @@ import  data from '../utils/data'
 // import layout components
 import HomeLayout from './components/HomeLayout'
 import ListLayout from "./components/ListLayout";
+import FormLayout from "./components/FormLayout";
 
 // fetch tasks from the server
 import { fetchReports } from "../utils/helpers";
@@ -33,10 +34,12 @@ function App() {
       <div style={{ display: "flex", gap: ".5rem", marginBottom: "" }}>
         <button value={"mapView"} onClick={()=> {setSelectView("mapView")}}>mapView</button>
         <button value={"listView" } onClick={()=> {setSelectView("listView")}}>listView</button>
+        <button value={"reportForm" } onClick={()=> {setSelectView("reportForm")}}>Report Form</button>
       </div>
 
       {selectView == "mapView" && <HomeLayout />}
       {selectView == "listView" &&  <ListLayout data={data.reports} />}
+      {selectView == "reportForm" && <FormLayout />}
 
     </>
   );

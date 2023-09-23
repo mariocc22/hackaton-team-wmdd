@@ -33,6 +33,35 @@
   }
 }
 
+/*--- FONTS ---*/
+@font-face {font-family: "Bricolage Grotesque"; src: url("../src/assets/fonts/BricolageGrotesque-Light.ttf");}
+@font-face {font-family: "Unbounded"; src: url("../src/assets/fonts/Unbounded-Medium.ttf");}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:"Unbounded", sans-serif;
+  font-size:1.5rem;
+}
+
+body {
+  font-family:"Bricolage Grotesque", sans-serif;
+  font-size:0.95rem;
+  color:var(--text)
+}
+
+:root {
+  --accent-green:#bfd8ad;
+  --accent-green-light:#dae8d0;
+  --text:#444b5c;
+  --borders:#dedfe4;
+  --background:#fcfcfc;
+}
+
+input, textarea, button {
+  font-family:inherit;
+  font-size:inherit;
+  color:inherit;
+}
+
 .card {
   padding: 2em;
 }
