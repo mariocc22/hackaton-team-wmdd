@@ -13,6 +13,7 @@ import { fetchReports } from "../utils/helpers";
 function App() {
   const [selectView, setSelectView] = useState("mapView");
   const [reports, setReports] = useState([]);
+  const [cordinate, setCordinate] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,6 +24,12 @@ function App() {
   }, []);
 
   // console.log("this is the data", reports);
+
+  const openFormLayout = (cordinate) => {
+    setSelectView("reportForm");
+    setCordinate(cordinate);
+    console.log("Report issue at: ", cordinate);
+  };
 
   return (
     <>
@@ -54,9 +61,11 @@ function App() {
         </button>
       </div>
 
-      {selectView == "mapView" && <HomeLayout data={reports} />}
+      {selectView == "mapView" && (
+        <HomeLayout data={reports} openFormLayout={openFormLayout} />
+      )}
       {selectView == "listView" && <ListLayout data={reports} />}
-      {selectView == "reportForm" && <FormLayout />}
+      {selectView == "reportForm" && <FormLayout cordinate={cordinate} />}
     </>
   );
 }
