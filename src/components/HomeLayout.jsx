@@ -11,6 +11,7 @@ import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import { Link } from "@mui/material";
+import DetailModal from "./DetailModal";
 
 function HomeLayout({ data, openFormLayout }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -89,9 +90,7 @@ function HomeLayout({ data, openFormLayout }) {
               ))}
               {infoWindowContent && (
                 <InfoWindow position={center}>
-                  <div>
-                    {infoWindowContent}
-                  </div>
+                  <div>{infoWindowContent}</div>
                 </InfoWindow>
               )}
             </GoogleMap>
