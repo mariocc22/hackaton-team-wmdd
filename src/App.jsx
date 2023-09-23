@@ -35,7 +35,7 @@ function App() {
       </div>
 
       {selectView == "mapView" && <HomeLayout />}
-      {selectView == "listView" && <ListLayout /> }
+      {selectView == "listView" && <ListLayout reports={reports}/> }
 
 
 
