@@ -47,8 +47,8 @@ function App() {
         <button value={"reportForm" } onClick={()=> {setSelectView("reportForm")}}>Report Form</button>
       </div>
 
-      {selectView == "mapView" && <HomeLayout data={reports} />}
-      {selectView == "listView" && <ListLayout data={reports} />}
+      {selectView == "mapView" && <HomeLayout data={data.reports} />}
+      {selectView == "listView" && <ListLayout data={data.reports} />}
       {/* {selectView == "reportForm" && <FormLayout />} */}
     </>
   );
