@@ -1,16 +1,16 @@
 import React from "react";
 
-import { GoogleMap, useLoadScript , withGoogleMap} from "@react-google-maps/api";
-import { Marker } from "google-maps-react-markers";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+// import { Marker } from "google-maps-react-markers";
 import { useMemo } from "react";
 import "../../src/App.css";
 
-const HomeLayout = withGoogleMap(() => {
+const HomeLayout = () => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAafj5ZO6dNK-OloRNXjot-Jk4TEgdKZLo",
   });
-  const center = useMemo(() => ({ lat: 49.2827, lng: -123.1207 }), []);
-
+//   const center = useMemo(() => ({ lat: 49.2827, lng: -123.1207 }), []);
+    const center = { lat: 49.2827, lng: -123.1207 }
   return (
     <>
       <div className="mapWrapperStyle">
@@ -25,16 +25,12 @@ const HomeLayout = withGoogleMap(() => {
               console.log(e);
             }}
           >
-            
-              <Marker  lat={49.2827}
-            lng={-123.1207}
-            />
-            
+            <Marker position={center} />
           </GoogleMap>
         )}
       </div>
     </>
   );
-})
+};
 
 export default HomeLayout;
