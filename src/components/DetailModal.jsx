@@ -1,4 +1,3 @@
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -9,12 +8,12 @@ import { useState } from "react";
 export default function DetailModal({ details }) {
   console.log("details", details);
   const [activeModal, setActiveModal] = useState({
-    name: details.item.name ,
-    type: details.item.type ,
-    image: details.item.image ,
-    datePosted: details.item.datePosted ,
+    name: details.item.name,
+    type: details.item.type,
+    image: details.item.image,
+    postedDate: details.item.postedDate,
     dateResolved: details.item.endDate,
-    reportBy: details.item.reporterName 
+    reportBy: details.item.reporterName,
   });
 
   console.log("activeModal", activeModal);
@@ -24,7 +23,7 @@ export default function DetailModal({ details }) {
   //   type: details.type ,
   //   datePosted: details.datePosted ,
   //   dateResolved: details.dateResolved,
-  //   reportBy: details.reportBy 
+  //   reportBy: details.reportBy
   // };
   // console.log("detailsPlace", detailsPlace);
   // const detailsPlace = {
@@ -59,7 +58,7 @@ export default function DetailModal({ details }) {
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <span style={{ color: "black" }}>Date posted: </span>
-            {activeModal.datePosted}
+            {activeModal?.postedDate}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <span style={{ color: "black" }}>Date Resolved: </span>
@@ -74,4 +73,3 @@ export default function DetailModal({ details }) {
     </Card>
   );
 }
-

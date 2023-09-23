@@ -38,6 +38,7 @@ function App() {
           value={"mapView"}
           onClick={() => {
             setSelectView("mapView");
+            location.reload();
           }}
         >
           mapView

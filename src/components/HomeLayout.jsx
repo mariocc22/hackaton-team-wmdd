@@ -12,7 +12,6 @@ import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import DetailModal from "./DetailModal";
 import { Link } from "@mui/material";
-import DetailModal from "./DetailModal";
 
 function HomeLayout({ data, openFormLayout }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -42,7 +41,15 @@ function HomeLayout({ data, openFormLayout }) {
           <br />
           Position: {event.latLng.lat()}, {event.latLng.lng()}
           <br />
-          <button href="#" onClick={()=>openFormLayout({lat:event.latLng.lat(), lon:event.latLng.lng()})}>
+          <button
+            href="#"
+            onClick={() =>
+              openFormLayout({
+                lat: event.latLng.lat(),
+                lon: event.latLng.lng(),
+              })
+            }
+          >
             Report issue
           </button>
           <br />
