@@ -1,13 +1,32 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
+import { useState, useEffect } from "react";
+
 import "./App.css";
-import HomeLayout from "./components/HomeLayout";
+
+// import layout components
+import HomeLayout from './components/HomeLayout'
 import ListLayout from "./components/ListLayout";
+
+
+
+// fetch tasks from the server
+import { fetchReports } from "../utils/helpers";
+
 
 function App() {
   const [selectView, setSelectView] = useState("mapView");
-  console.log(selectView);
+  const [reports, setReports] = useState([]);
+  
+  
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetchReports();
+      setReports(res);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div style={{ display: "flex", gap: ".5rem", marginBottom: "" }}>
@@ -17,7 +36,10 @@ function App() {
 
       {selectView == "mapView" && <HomeLayout />}
       {selectView == "listView" && <ListLayout /> }
-      {/* <HomeLayout /> */}
+
+
+
+
     </>
   );
 }
