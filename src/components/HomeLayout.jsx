@@ -11,6 +11,7 @@ import { useMemo, useState } from "react";
 import "../../src/App.css";
 import OpenReportModal from "./OpenReportModal";
 import { Link } from "@mui/material";
+import DetailModal from "./DetailModal";
 
 function HomeLayout({ data, openFormLayout }) {
   const [activeMarker, setActiveMarker] = useState(null);
@@ -34,12 +35,13 @@ function HomeLayout({ data, openFormLayout }) {
     if (event.placeId) {
       const content = (
         <div>
-          <strong>You clicked place</strong>
-          <br />
-          Place ID: {event.placeId}
-          <br />
-          Position: {event.latLng.lat()}, {event.latLng.lng()}
-          <br />
+          <strong>Accessibility</strong>
+          <ul>
+            <li>Wheelchair accessible elevator</li>
+            <li>Wheelchair accessible entrance</li>
+            <li>Wheelchair accessible parking lot</li>
+            <li>Wheelchair accessible restroom</li>
+          </ul>
           <button
             href="#"
             onClick={() =>
@@ -75,6 +77,7 @@ function HomeLayout({ data, openFormLayout }) {
                 <Marker
                   key={item.id}
                   position={{ lat: item.lat, lng: item.lng }}
+                  icon="../src/assets/chair.png"
                   onClick={() => {
                     handleActiveMarker(item.id);
                   }}
@@ -86,19 +89,6 @@ function HomeLayout({ data, openFormLayout }) {
                   ) : null}
                 </Marker>
               ))}
-              {/* <Marker
-                position={{ lat: 49.284445661037054, lng: -123.1246298889249 }}
-              >
-                <InfoWindow>
-                  <Link
-                    onClick={() => {
-                      console.info("I'm a button.");
-                    }}
-                  >
-                    Report issue
-                  </Link>
-                </InfoWindow>
-              </Marker> */}
               {infoWindowContent && (
                 <InfoWindow position={center}>
                   <div>{infoWindowContent}</div>
