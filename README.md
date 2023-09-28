@@ -26,7 +26,7 @@ Created for hackathon, we teamed up as a group of **5 developers** to create a s
 
 ### 🖥️ Preview:
 
-![Screen recording demo for WheelScout. Please open the dropdown below for a detailed image description.](https://rhizo.gitlab.io/random/images/9823402738.gif)
+![Screen recording demo for WheelScout. There are three tabs at the top. The first tab says 'View Map' with a globe emoji. The second tab says 'Recent Reportings' with memo emoji. The third tab says 'Report a Problem' with a light bulb emoji. The map tab is shown when the site loads, displaying downtown Vancouver with numerous locations marked with circular wheelchair indicators. The user clicks on Amigo Cafe, and a mini modal appears with a photo, name, problem type, and additional information about the report, including when it was posted, and by whom. The user clicks the 'x' icon to dismiss the modal, and clicks on the 'Recent Reportings' tab. The screen switches to reveal a list of latest reports from the community with corresponding information, as well as thumbs up and thumbs down icons that are labelled with 'Did you find this helpful?' alongside. The user clicks on the thumbs up, and a confirmation popup appears. The thumbs up icon then turns green. The user returns to the map tab, and clicks on Science World. After a brief delay, a small modal appears with accessibility information provided by Google Maps, along with a button that says 'report issue'. Clicking the button takes the user to the 'Report a Problem' tab, which is a form that consists of location name, address, problem type as a dropdown, optional problem details, and a date picker. Upon filling in the form and pressing the 'Submit Report' button, the user goes back to the map view, and demonstrates that the Science World report has been added with the information they filled in. Finally, the user goes to the 'Recent Reportings' tab to show that it's been added to the list too.](https://rhizo.gitlab.io/random/images/9823402738.gif)
 
 <details>
 <summary><sub><sup>Open for image description.</sup></sub></summary>
@@ -78,7 +78,7 @@ Created for hackathon, we teamed up as a group of **5 developers** to create a s
 - **HT** – [🔗](https://www.linkedin.com/in/ht-dev)
 - **Mahima** – [🔗](https://www.linkedin.com/in/mahima-mukhi-b70742138/)
 
-![Langara Hackathon 2023 Event Photos. Please read the dropdown below for detailed image descriptions.](https://rhizo.gitlab.io/random/images/873498273.png)
+![Langara Hackathon 2023 Event Photos. An assortment of 8 photos arranged in a grid format of varying sizes, with the text 'WheelScout' scrawled across the center. From top left to bottom right, first image is of the WheelScout team posing happily for a group photo. Second image is of the team huddled together and holding the first place award plaque on the stage. Third and fifth images are of the team presenting in front of the judges in a conference room. Fourth and seventh images are of the team presenting on the stage in front of the audience. Sixth image is a view of the hackathon venue, with all participants at work. Eighth image is of the team huddled together and holding the first place award plaque in front of the hackathon photo booth, which has 'LANGARA HACKS' in all caps shaped by black balloons, with an assortment of circular orange paper decorations as the backdrop.](https://rhizo.gitlab.io/random/images/873498273.png)
 
 <details>
 <summary><sub><sup>Open for image description.</sup></sub></summary>
