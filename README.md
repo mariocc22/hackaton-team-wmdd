@@ -1,3 +1,13 @@
+### 📜 Table of Contents:
+- [👋 About](#about)
+- [🌐 Links](#links)
+- [🖥️ Preview](#%EF%B8%8Fpreview)
+- [😊 Main Features](#main-features)
+- [🔨 Tech Stack](#tech-stack)
+- [👥 Team Members](#team-members)
+
+---
+
 ### 👋 About:
 
 Created for hackathon, we teamed up as a group of **5 developers** to create a site/app on the topic of **"Society / Community"**. We had 9 hours to complete this project, and are honored to have been granted 1st place. 🏆
