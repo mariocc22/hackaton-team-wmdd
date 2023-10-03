@@ -19,7 +19,7 @@ function HomeLayout({ data, openFormLayout }) {
   const [infoWindowContent, setInfoWindowContent] = useState(null);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyAafj5ZO6dNK-OloRNXjot-Jk4TEgdKZLo",
+    googleMapsApiKey: process.env.googleMAPAPI,
   });
   const center = useMemo(() => ({ lat: 49.2827, lng: -123.1207 }), []);
 
